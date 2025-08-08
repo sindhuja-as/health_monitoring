@@ -1,0 +1,17 @@
+encryption:
+  at_rest: AES-256
+  in_transit: TLS
+  enabled: true
+
+anonymization:
+  hash_identifiers: true
+  hash_algorithm: SHA-256
+  fields_to_hash: ["patient_id", "ssn"]
+
+logging:
+  level: INFO
+  log_sensitive_data: false
+
+access_control:
+  role_based: true
+  allowed_roles: ["data_scientist", "ml_engineer"]
